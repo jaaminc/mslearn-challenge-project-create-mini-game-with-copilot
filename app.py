@@ -31,10 +31,11 @@ def winner(option1, option2):
     else:
         return "Player 2 wins"
 
-# Write a python function that check if the game is over and check the input is yes o no
+# Write a python function that check if the game is over and check the input in lower case is yes o no
 def game_over():
     while True:
         game_over = input("Do you want to play again? (yes/no): ")
+        game_over = game_over.lower()
         if game_over == "yes":
             return "yes"
         elif game_over == "no":
