@@ -1,5 +1,4 @@
-# Escribir "Hello World" en la consola
-print("Hello World")
+# Write a python program that play rock, scissors, paper game
 
 options = ("rock", "scissors", "paper")
 
