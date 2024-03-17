@@ -30,9 +30,17 @@ def winner(option1, option2):
     else:
         return "Player 2 wins"
 
-# Write a python function that check if the game is over
+# Write a python function that check if the game is over and check the input is yes o no
 def game_over():
-    return input("Do you want to play again? (yes/no): ")
+    while True:
+        game_over = input("Do you want to play again? (yes/no): ")
+        if game_over == "yes":
+            return "yes"
+        elif game_over == "no":
+            return "no"
+        else:
+            print("Invalid option")
+
 
 # Write a python function that play the game
 def play_game():
@@ -59,5 +67,6 @@ def play_game():
 
     print("Player 1 wins:", player1_wins)
     print("Player 1 ties:", player1_ties)
+    print("Player 1 losses:", rounds - player1_wins - player1_ties)
     print("Total rounds:", rounds)
 play_game()
