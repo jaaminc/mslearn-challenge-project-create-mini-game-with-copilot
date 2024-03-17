@@ -16,9 +16,10 @@ import random
 def random_option(options):
     return random.choice(options)
 
-# Write a python function that ask for an option and return it in lower case
+# Write a python function that show options and ask for an option and return it in lower case
 def ask_option():
-    option = input("Enter your option: ")
+    print("Options (", options + ") :")
+    option = input("Enter your option : ")
     option = option.lower()
     return option
 
