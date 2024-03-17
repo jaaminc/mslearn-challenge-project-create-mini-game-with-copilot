@@ -36,15 +36,24 @@ def game_over():
 
 # Write a python function that play the game
 def play_game():
+ 
+    player1_wins = 0
+    rounds = 0
+
     while True:
         option1 = ask_option()
         if check_option(option1, options):
             option2 = random_option(options)
             print("Player 2: " + option2)
             print(winner(option1, option2))
+            rounds += 1
+            if winner(option1, option2) == "Player 1 wins":
+                player1_wins += 1
             if game_over() == "no":
                 break
         else:
             print("Invalid option")
 
+    print("Player 1 wins:", player1_wins)
+    print("Total rounds:", rounds)
 play_game()
