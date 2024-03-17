@@ -37,7 +37,8 @@ def game_over():
 # Write a python function that play the game
 def play_game():
  
-    player1_wins = 0
+    player1_wins = 0    
+    player1_ties = 0
     rounds = 0
 
     while True:
@@ -49,11 +50,14 @@ def play_game():
             rounds += 1
             if winner(option1, option2) == "Player 1 wins":
                 player1_wins += 1
+            elif winner(option1, option2) == "Tie":
+                player1_ties += 1
             if game_over() == "no":
                 break
         else:
             print("Invalid option")
 
     print("Player 1 wins:", player1_wins)
+    print("Player 1 ties:", player1_ties)
     print("Total rounds:", rounds)
 play_game()
